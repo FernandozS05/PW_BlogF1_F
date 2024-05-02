@@ -1,0 +1,385 @@
+/* ---------------------------------------------
+   Documentación Hoja de Estilos CSS
+--------------------------------------------- */
+
+/*
+   Índice de Contenido:
+
+   1. Ajustes generales
+   2. Estilos de la barra de navegación
+   3. Estilos para dispositivos móviles
+   4. Estilos para dispositivos de escritorio
+   5. Estilos de la sección de encabezado
+   6. Estilos de la sección de texto
+   7. Estilos del carrusel rectangular
+   8. Estilos del carrusel circular
+   9. Estilos del carrusel videos
+   10. Estilos del formulario de contacto
+   11. Estilos del footer
+*/
+
+/* ---------------------------------------------
+   1. Ajustes generales
+--------------------------------------------- */
+* {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------
+     2. Estilos de la barra de navegación
+  --------------------------------------------- */
+.nav-link {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid black;
+}
+
+.logo-img {
+  width: 145px;
+  margin-right: 150px;
+}
+
+.navbar {
+  min-height: 45px;
+  margin-top: 0;
+  background-color: #f9ab55;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  margin-right: 100px;
+}
+
+/* ---------------------------------------------
+   3. Estilos para dispositivos móviles
+--------------------------------------------- */
+@media only screen and (max-width: 767px) {
+  .logo-img {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ---------------------------------------------
+     4. Estilos para dispositivos de escritorio
+  --------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .logo-img {
+    width: 145px;
+    margin-right: 150px;
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ---------------------------------------------
+   5. Estilos de la sección de encabezado
+--------------------------------------------- */
+.encabezado {
+  width: 100%;
+  background-color: #2d67a1;
+  color: white;
+  padding: 5px;
+}
+
+/* ---------------------------------------------
+     6. Estilos de la sección de texto
+  --------------------------------------------- */
+.txt {
+  width: 100%;
+  background-color: #d9d9d9;
+  color: black;
+  padding: 5px;
+}
+
+/* ---------------------------------------------
+   7. Estilos del carrusel rectangular
+--------------------------------------------- */
+.carousel-item .col {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  padding: 0;
+}
+
+.carousel-item .col img {
+  width: calc(100% + 40px);
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+}
+
+.carousel-item .col .btn {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid #f58a07;
+  color: #f58a07;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.carousel-item .col:hover .btn {
+  opacity: 1;
+}
+
+.carousel-item .col:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item .col:hover img {
+  opacity: 0.5;
+}
+
+.carousel-item .col:hover .title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  font-weight: bold;
+  color: #f58a07;
+  opacity: 1;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #f58a07;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* ---------------------------------------------
+   8. Estilos del carrusel circular
+--------------------------------------------- */
+.mi-carrusel button {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.mi-swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mi-swiper-wrapper button {
+  background-color: white;
+}
+
+.mi-swiper-slide {
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  background-color: #f9ab55;
+  border-radius: 50%;
+  margin-right: 40px;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mi-swiper-slide img {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mi-swiper-slide:first-child {
+  margin-left: 0;
+}
+
+.mi-swiper-slide:last-child {
+  margin-right: 0;
+}
+
+.mi-swiper-slide h4 {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+}
+
+/* ---------------------------------------------
+   9. Estilos del carrusel videos
+--------------------------------------------- */
+.carousel-vid .col {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+  padding: 0;
+}
+
+.carousel-vid .col img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+}
+
+.play-icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.play-icon-overlay img {
+  transform: scale(0.8);
+}
+
+.carousel-vid .col:hover .play-icon-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.carousel-vid .col:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-vid .col:hover img {
+  opacity: 1;
+}
+
+/* ---------------------------------------------
+   10. Estilos del formulario de contacto
+--------------------------------------------- */
+.formulario-container {
+  background-color: #d9d9d9;
+  padding: 25px;
+  border-radius: 20px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: calc(100% - 22px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  opacity: 75%;
+  color: #333;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #2d67a1;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+::placeholder {
+  color: black;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------
+   11. Estilos del footer
+--------------------------------------------- */
+footer {
+    background-color: #f9ab55;
+    padding: 20px;
+    color: black;
+    text-align: center;
+  }
+  
+  footer h2 {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+  }
