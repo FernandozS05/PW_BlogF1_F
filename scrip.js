@@ -1,18 +1,19 @@
-const swiper = new Swiper(".swiper", {
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  direction: "horizontal",
-  loop: "false",
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+document.addEventListener("DOMContentLoaded", function() {
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    direction: "horizontal",
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
 
 function abrirVista(url) {
