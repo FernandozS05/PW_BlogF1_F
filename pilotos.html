@@ -1,11 +1,329 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilotos - Adrenalina en la Pista: Fórmula 1 al Límite</title>
-</head>
-<body>
-    <!-- Contenido de la sección de Pilotos -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilotos</title>
+    <link rel="icon" href="./assets/icon.jpeg" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scrip.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm left-section">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <a href="index.html">
+              <img
+                src="./assets/Logo.png"
+                class="logo-img"
+                alt="Icono del Blog"
+              />
+            </a>
+            <h1 class="navbar-title">
+              Adrenalina en la Pista: Fórmula 1 al Límite
+            </h1>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="equipos.html"
+                  >Equipos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="pilotos.html"
+                  >Pilotos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="vehiculos.html"
+                  >Vehículos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="calendario.html"
+                  >Calendario</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-4">
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot1.webp"
+            alt="Max Verstappen"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Max Verstappen', './assets/pilot1.webp', 'Red Bull Racing', '1997-09-30 (Edad 26)', 'Países Bajos, Holanda', 'Verstappen es uno de los talentos emergentes más destacados del panorama automovilístico internacional. Su precocidad -debutó con 17 años- le convierte en un caso paradigmático. Combina la ambición de la juventud con la pericia y la experiencia de un veterano.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot2.webp"
+            alt="Sergio Pérez"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Sergio Pérez', './assets/pilot2.webp', 'Red Bull Racing', '1990-01-26 (Edad 34)', 'México', 'Pérez es conocido por su agresividad y bravura al volante, que le han valido una reputación de competidor nato en la categoría reina. Es uno de los talentos más brillantes del automovilismo mexicano y es el responsable de la creciente popularidad de este deporte en ese país.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot3.webp"
+            alt="Carlos Sainz"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Carlos Sainz', './assets/pilot3.webp', 'Ferrari', '1994-09-01 (Edad 29)', 'España', 'Sainz es uno de los talentos de su generación y el relevo natural de Fernando Alonso en el automovilismo español. Su buen rendimiento con la Scuderia Toro Rosso le valió la confianza de Renault Sport F1 Team.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot4.webp"
+            alt="Charles Leclerc"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Charles Leclerc', './assets/pilot4.webp', 'Ferrari', '1997-10-16 (Edad 26)', 'Mónaco', 'Leclerc es uno de los grandes talentos de su generación. Su éxito arrollador en las categorías inferiores del deporte le convierte en uno de los prospectos más interesantes del panorama internacional.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot5.webp"
+            alt="Lewis Hamilton"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Lewis Hamilton', './assets/pilot5.webp', 'Mercedes', '1985-01-07 (Edad 39)', 'Reino Unido', 'Lewis Hamilton –Reino Unido, 1985– es un piloto siete veces campeón del mundo de Fórmula 1 que compite para el equipo Mercedes AMG F1 Petronas. Es el piloto británico más exitoso de todos los tiempos.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot6.webp"
+            alt="Fernando Alonso"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Fernando Alonso', './assets/pilot6.webp', 'Aston Martin Racing', '1981-07-29 (Edad 42)', 'España', 'Fernando Alonso –España, 1981– es un piloto dos veces campeón del mundo de Fórmula 1, es campeón del mundo de Resistencia y dos veces vencedor de las 24 Horas de Le Mans que compitió para los equipos Minardi, Renault, McLaren y Ferrari')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot7.webp"
+            alt="Lando Norris"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Lando Norris', './assets/pilot7.webp', 'McLaren F1', '1999-11-13 (Edad 24)', 'Reino Unido', 'Norris nació en la ciudad inglesa de Bristol en el año 1999. Su carrera deportiva comenzó en el karting, disciplina en la que se inició con siete años y donde cosechó éxitos de categoría mundial.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot8.webp"
+            alt="Oscar Piastri"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Oscar Piastri', './assets/pilot8.webp', 'McLaren F1', '2001-04-06 (Edad 23)', 'Australia', 'El joven australiano tuvo que pasar un año sin competir después de alcanzar la gloria en un mal ‘timing’ con sus tres títulos consecutivos en Fórmula Renault Eurocup, Fórmula 3 y el último de Fórmula 2 en 2021.')"
+          />
+        </div>
+
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot9.webp"
+            alt="George Russell"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('George Russell', './assets/pilot9.webp', 'Mercedes', '1998-02-15 (Edad 26)', 'Reino Unido', 'Russell dio sus primeros pasos en el automovilismo en 2006, cuando tenía siete años. Compitió a nivel internacional y se proclamó campeón europeo en la categoría CIK-FIA KF3 en la temporada 2012.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot10.webp"
+            alt="Oliver Bearman"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Oliver Bearman', './assets/pilot10.webp', 'Ferrari', '2005-05-08 (Edad 18)', 'Reino Unido', 'Oliver Bearman ha sido elegido para sustituir a Carlos Sainz en Ferrari en el GP de Arabia Saudita tras el apendicitis que sufre el piloto español.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot11.webp"
+            alt="Nico Hulkenberg"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Nico Hulkenberg', './assets/pilot11.webp', 'Haas F1 Team', '1987-08-19 (Edad 36)', 'Alemania', 'Hülkenberg es uno de los talentos de su generación. Se labró una reputación con coches de la media parrilla y confirmó su talento con una victoria con Porsche en la edición 2015 de Le Mans.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot12.webp"
+            alt="Yuki Tsunoda"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Yuki Tsunoda', './assets/pilot12.webp', 'RB', '2000-05-11 (Edad 23)', 'Japón', 'Empezó muy joven en el karting, con apenas cuatro años, y ya con 13 años consiguió su primer título, al ganar un campeonato regional. En 2015 dio otro paso importante, ya que se alzó con el segundo puesto en el Campeonato Nacional de Karting.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot13.webp"
+            alt="Kevin Magnussen"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Kevin Magnussen', './assets/pilot13.webp', 'Haas F1 Team', '1992-10-05 (Edad 31)', 'Dinamarca', 'Magnussen se formó en el programa de jóvenes talentos de McLaren, equipo con el que debutó en 2014. Es agresivo e irreverente al volante, lo que en ocasiones le ha situado en el foco de las críticas de sus rivales.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot14.webp"
+            alt="Lance Stroll"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Lance Stroll', './assets/pilot14.webp', 'Aston Martin Racing', '1998-10-29 (Edad 25)', 'Canadá', 'Stroll es la joven promesa del automovilismo canadiense. Campeón de la prestigiosa Fórmula 3 europea en el año 2015, aspira a todo en la Fórmula 1. Su adinerada familia le ha granjeado la fama de piloto de pago.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot15.webp"
+            alt="Valtteri Bottas"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Valtteri Bottas', './assets/pilot15.webp', 'Sauber F1 Team', '1989-08-28 (Edad 34)', 'Finlandia', 'Bottas llegó Alfa Romeo –ahora Stake F1 Team Kick Sauber– en 2022, después de un largo periodo de tiempo en Mercedes AMG.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot16.webp"
+            alt="Esteban Ocon"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Esteban Ocon', './assets/pilot16.webp', 'Alpine', '1996-09-17 (Edad 27)', 'Francia', 'Ocon es una de las promesas de su generación, así como el abanderado del legado del automovilismo francés. Cuenta con un rico palmarés en las categorías inferiores del deporte, entre el que destaca el título de la Fórmula 3 europea del año 2014.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot17.webp"
+            alt="Guanyu Zhou"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Guanyu Zhou', './assets/pilot17.webp', 'Sauber F1 Team', '1999-05-30 (Edad 24)', 'China', 'Entró a la Academia de Renault en 2019, después de cuatro temporadas en la escuela de Ferrari. En su primera campaña en F2, corrió junto con Luca Ghiotto y logró una Pole, dos vueltas rápidas y cinco podios.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot18.webp"
+            alt="Alexander Albon"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Alexander Albon', './assets/pilot18.webp', 'Williams', '1996-03-23 (Edad 28)', 'Tailandia', 'Nacido en Londres en 1996, Albon llegó a la Fórmula 1 en 2019 después de militar en algunas de las categorías formativas más prestigiosas del panorama internacional.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot19.webp"
+            alt="Pierre Gasly"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Pierre Gasly', './assets/pilot19.webp', 'Alpine', '1996-02-07 (Edad 28)', 'Francia', 'Gasly cuenta con un dilatado historial en las categorías inferiores, en el que destaca su triunfo en las GP2 Series de 2016. La consecución de ese título le hizo merecedor de llegar a la Fórmula 1.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot20.webp"
+            alt="Daniel Ricciardo"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Daniel Ricciardo', './assets/pilot20.webp', 'RB', '1989-07-01 (Edad 34)', 'Australia', 'Ricciardo es producto de la academia de jóvenes talentos de Red Bull, que le guio a través de las categorías formativas hasta la cúspide del automovilismo. Debutó con la escudería HRT y pasó dos temporadas con Toro Rosso antes de ascender al primer equipo.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/pilot21.webp"
+            alt="Logan Sargeant"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarPiloto('Logan Sargeant', './assets/pilot21.webp', 'Williams', '2000-12-31 (Edad 23)', 'Estados Unidos', 'Logan Sargeant aterrizó esta temporada en Fórmula 1 y su debut, con Williams, no ha sido tan bueno como se esperaba en un inicio. Era uno de los invitados menos habituales a la zona de puntos, tras sumar siete abandonos.')"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="contacto">
+        <h5>Datos de Contacto</h5>
+      </div>
+      <div id="redes-sociales">
+        <div class="social-icons">
+          <a href="#"><img src="./assets/github_icon.png" alt="Github" /></a>
+          <a href="#"><img src="./assets/discord_icon.png" alt="Discord" /></a>
+          <a href="#"
+            ><img src="./assets/whatsapp_icon.png" alt="Whatsapp"
+          /></a>
+          <a href="#"
+            ><img src="./assets/facebook_icon.png" alt="Facebook"
+          /></a>
+          <a href="#"><img src="./assets/gmail_icon.png" alt="Gmail" /></a>
+        </div>
+      </div>
+      <div id="derechos-autor">
+        <h6>Aviso de Derechos de Autor</h6>
+        <p>Copyright © 2024 | Fernando Larios Sánchez</p>
+      </div>
+    </footer>
+
+    <script>
+      function mostrarPiloto(
+        nombre,
+        imagen,
+        equipo,
+        nacionalidad,
+        fechaNacimiento,
+        descripcion
+      ) {
+        Swal.fire({
+          title: nombre,
+          html: `<img src="${imagen}" style="max-width: 60%; height: a;" />
+            <div style="display: flex; align-items: center;">           
+                     <div>
+                       <p><strong>Equipo:</strong> ${equipo}</p>
+                       <p><strong>Nacionalidad:</strong> ${nacionalidad}</p>
+                       <p><strong>Fecha de Nacimiento:</strong> ${fechaNacimiento}</p>
+                       <p><strong>Descripción:</strong> ${descripcion}</p>
+                     </div>
+                   </div>`,
+          confirmButtonText: "Cerrar",
+        });
+      }
+    </script>
+  </body>
 </html>

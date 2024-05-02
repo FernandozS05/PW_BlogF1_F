@@ -1,11 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipos - Adrenalina en la Pista: Fórmula 1 al Límite</title>
-</head>
-<body>
-    <!-- Contenido de la sección de Equipos -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipos</title>
+    <link rel="icon" href="./assets/icon.jpeg" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scrip.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm left-section">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <a href="index.html">
+              <img
+                src="./assets/Logo.png"
+                class="logo-img"
+                alt="Icono del Blog"
+              />
+            </a>
+            <h1 class="navbar-title">
+              Adrenalina en la Pista: Fórmula 1 al Límite
+            </h1>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="equipos.html"
+                  >Equipos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="pilotos.html"
+                  >Pilotos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="vehiculos.html"
+                  >Vehículos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="calendario.html"
+                  >Calendario</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-4">
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp1.webp"
+            alt="Alpine-Renault A524"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Alpine-Renault A524', './assets/eqp1.webp', 'Francia', ['Esteban Ocon', 'Pierre Gasly'], 'BWT Alpine F1 Team es un equipo de Fórmula 1 de origen francés con fábrica en Enstone, Reino Unido. Es propiedad de Renault, que compitió en la categoría reina bajo ese nombre hasta 2020.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp2.webp"
+            alt="Aston Martin Aramco-Mercedes AMR24"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Aston Martin Aramco-Mercedes AMR24', './assets/eqp2.webp', 'Reino Unido', ['Fernando Alonso', 'Lance Stroll'], 'Aston Martin Aramco F1 Team es un equipo privado de origen británico con sede en Silverstone, Gran Bretaña. Es propiedad de un consorcio de inversores encabezado por el multimillonario canadiense Lawrence Stroll.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp3.webp"
+            alt="Ferrari SF-24"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Ferrari SF-24', './assets/eqp3.webp', 'Italia', ['Carlos Sainz', 'Charles Leclerc', 'Oliver Bearman'], 'Scuderia Ferrari es un equipo de origen italiano con sede en Maranello, Italia. Es la escudería oficial del fabricante de automóviles Ferrari.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp4.webp"
+            alt="Haas-Ferrari VF-24"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Haas-Ferrari VF-24', './assets/eqp4.webp', 'Estados Unidos', ['Nico Hulkenberg', 'Kevin Magnussen'], 'MoneyGram Haas F1 Team es un equipo privado de origen estadounidense con sedes en Banbury –Reino Unido– y Kannapolis –Estados Unidos–. Es propiedad de su fundador Gene Haas.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp5.webp"
+            alt="McLaren-Mercedes MCL38"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('McLaren-Mercedes MCL38', './assets/eqp5.webp', 'Reino Unido', ['Lando Norris', 'Oscar Piastri'], 'McLaren es un equipo privado de origen británico con sede en Woking, Gran Bretaña. Es propiedad del Grupo McLaren, cuyo máximo accionista es el fondo soberano de Baréin, Mumtalakat, con un 60% del accionariado.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp6.webp"
+            alt="Mercedes F1 W15"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Mercedes F1 W15', './assets/eqp6.webp', 'Alemania', ['Lewis Hamilton', 'George Russell'], 'Mercedes AMG F1 Petronas es un equipo de origen alemán con sedes en Brackley y Brixworth, en Gran Bretaña. Originalmente Daimler poseía el 60% del equipo, Toto Wolff el 30% y Niki Lauda el 10%.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp7.webp"
+            alt="RB-Honda RBPT"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('RB-Honda RBPT', './assets/eqp7.webp', 'Italia', ['Yuki Tsunoda', 'Daniel Ricciardo'], 'RB es un equipo privado de origen italiano con sede en Faenza, Italia y Bicester, Reino Unido. Es propiedad de la marca de bebidas energéticas Red Bull, adquirido en 2006 para renombrarlo como Toro Rosso. En 2020 pasó a llamarse AlphaTauri y, cuatro años después, su nombre completo pasa a ser Visa Cash App RB F1 Team.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp8.webp"
+            alt="Red Bull Racing-Honda RBPT RB20"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Red Bull Racing-Honda RBPT RB20', './assets/eqp8.webp', 'Austria', ['Max Verstappen', 'Sergio Pérez'], 'Red Bull Racing es un equipo privado de origen austríaco con sede en Milton Keynes, en Gran Bretaña. Es propiedad de la marca de bebidas homónima.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp9.webp"
+            alt="Kick Sauber-Ferrari C44"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Kick Sauber-Ferrari C44', './assets/eqp9.webp', 'Suiza', ['Valtteri Bottas', 'Guanyu Zhou'], 'Stake F1 Team Kick Sauber es un equipo privado de origen suizo con sede en Hinwil, Suiza. Una vez finalizada la relación con Alfa Romeo, el equipo cambió de nombre a Stake F1 Team Kick Sauber para el periodo de transición de 2024 y 2025.')"
+          />
+        </div>
+        <div class="col mb-4">
+          <img
+            src="./assets/eqp10.webp"
+            alt="Williams-Mercedes FW46"
+            class="equipo-img img-thumbnail"
+            onclick="mostrarEquipo('Williams-Mercedes FW46', './assets/eqp10.webp', 'Reino Unido', ['Alexander Albon', 'Logan Sargeant'], 'Williams Martini Racing es un equipo privado de origen inglés con sede en Grove, Gran Bretaña. Cotiza en la bolsa de Frankfurt. Su fundador y accionista mayoritario es Frank Williams, que posee el 52,25% de las participaciones.')"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="contacto">
+        <h5>Datos de Contacto</h5>
+      </div>
+      <div id="redes-sociales">
+        <div class="social-icons">
+          <a href="#"><img src="./assets/github_icon.png" alt="Github" /></a>
+          <a href="#"><img src="./assets/discord_icon.png" alt="Discord" /></a>
+          <a href="#"
+            ><img src="./assets/whatsapp_icon.png" alt="Whatsapp"
+          /></a>
+          <a href="#"
+            ><img src="./assets/facebook_icon.png" alt="Facebook"
+          /></a>
+          <a href="#"><img src="./assets/gmail_icon.png" alt="Gmail" /></a>
+        </div>
+      </div>
+      <div id="derechos-autor">
+        <h6>Aviso de Derechos de Autor</h6>
+        <p>Copyright © 2024 | Fernando Larios Sánchez</p>
+      </div>
+    </footer>
+
+    <script>
+      function mostrarEquipo(nombreEquipo, imagen, pais, pilotos, descripcion) {
+        Swal.fire({
+          title: nombreEquipo,
+          html: `<img src="${imagen}" style="max-width: 100%; height: auto;" /><br>
+                   País: ${pais}<br>
+                   Pilotos: ${pilotos.join(", ")}<br><br>
+                   Descripción: ${descripcion}`,
+          confirmButtonText: "Cerrar",
+        });
+      }
+    </script>
+  </body>
 </html>
