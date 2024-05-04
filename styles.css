@@ -365,21 +365,21 @@ label {
    11. Estilos del footer
 --------------------------------------------- */
 footer {
-    background-color: #f9ab55;
-    padding: 20px;
-    color: black;
-    text-align: center;
-  }
-  
-  footer h2 {
-    margin-bottom: 10px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-icons a {
-    margin: 0 10px;
-  }
+  background-color: #f9ab55;
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+
+footer h2 {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
